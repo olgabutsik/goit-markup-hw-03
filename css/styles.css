@@ -51,6 +51,8 @@ ul {
 }
 
 .logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   color: var(--logo-color);
@@ -64,7 +66,7 @@ ul {
 }
 
 .nav-menu .item + .item,
-.tel-ref {
+.list-contacts .item + .item {
   margin-left: 50px;
 }
 .main-nav {
@@ -111,6 +113,10 @@ ul {
 .tel-ref:focus,
 .email-ref:hover,
 .email-ref:focus,
+.tel-ref.footer:hover,
+.tel-ref.footer:focus,
+.email-ref.footer:hover,
+.email-ref.footer:focus,
 .address:hover,
 .address:focus {
   color: var(--click-color);
@@ -142,6 +148,9 @@ ul {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+.heading-our-features, .studio-cards{
+  visibility: hidden;
+}
 .btn-main-section {
   padding: 10px 32px;
   margin-top: 30px;
@@ -161,14 +170,12 @@ ul {
   cursor: pointer;
   background-color: var(--bg-btn-color);
 }
-.our-features,
-.what-we-are-doing {
-  background-color: var(--secondary-section-color);
-}
+
 .list-our-features {
-  width: 1170px;
+  width: 1200px;
   display: flex;
   padding-left: 15px;
+  padding-right: 15px;
 }
 .heading-our-features {
   font-weight: 700;
@@ -178,7 +185,7 @@ ul {
   color: var(--heading-text-color);
 }
 .list-our-features .item-our-features {
-  width: 270px;
+  width: calc((100% - 90px) / 4);
 }
 .list-our-features .item-our-features + .item-our-features,
 .list-we-are-doing .img-we-are-doing + .img-we-are-doing,
@@ -195,6 +202,10 @@ ul {
 .what-we-are-doing,
 .team {
   text-align: center;
+}
+.what-we-are-doing{
+  padding-top: 0;
+  padding-bottom: 94px;
 }
 .team {
   background-color: var(--team-section-color);
@@ -219,8 +230,13 @@ ul {
 .card-staffer {
   background-color: var(--main-bg-color);
 }
-.name-staffer {
+.data-staffer{
   padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.name-staffer {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -230,7 +246,6 @@ ul {
 }
 .position-staffer {
   margin-top: 10px;
-  padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -242,6 +257,7 @@ ul {
   padding-bottom: 60px;
   background-color: var(--footer-color);
 }
+
 .logo .footer-logo {
   color: var(--main-bg-color);
 }
@@ -252,6 +268,12 @@ ul {
   letter-spacing: 0.03em;
   text-decoration: none;
   font-style: normal;
+}
+.list-address{
+  padding-top: 20px;
+}
+.footer-contact-item:not(:first-child) {
+margin-top: 9px;
 }
 .email-ref.footer,
 .tel-ref.footer {
@@ -275,7 +297,7 @@ ul {
 }
 .five-btn {
   display: flex;
-  margin-left: 297px;
+  justify-content: center;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -338,7 +360,7 @@ ul {
   margin-top: 30px;
   margin-right: 30px;
   background-color: var(--main-bg-color);
-  border: var(--header-bottom-border) 1px solid;
+  
 }
 .portfolio-cards:nth-child(3n) {
   margin-right: 0;
@@ -346,9 +368,15 @@ ul {
 .portfolio-cards:nth-child(-n + 3) {
   margin-top: 0;
 }
+.name-portfolio-cards{
+  margin-top: -4px;
+  height: 110px;
+  padding: 20px 24px;
+  border-bottom  : var(--portfolio-cards-color) 1px solid;
+  border-left: var(--portfolio-cards-color) 1px solid;
+  border-right: var(--portfolio-cards-color) 1px solid;
+}
 .heading-portfolio {
-  padding-left: 24px;
-  padding-top: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -356,8 +384,6 @@ ul {
   letter-spacing: 0.06em;
 }
 .text-portfolio {
-  padding-left: 24px;
-  padding-bottom: 20px;
   font-size: 16px;
   line-height: 1.88;
   color: var(--paragraph-color);
@@ -365,4 +391,8 @@ ul {
 }
 .tel-ref.footer {
   margin-left: 0;
+}
+.tel-ref.footer,
+.email-ref.footer {
+  color:var(--main-bg-color);
 }
