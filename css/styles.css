@@ -11,7 +11,7 @@
   --portfolio-cards-color: #eeeeee;
   --logo-color: #000000;
   --header-bottom-border: #ececec;
-  --contact-footer-color:rgba(255, 255, 255, 0.6);
+  --contact-footer-color: rgba(255, 255, 255, 0.6);
 }
 body {
   font-family: var(--main-font);
@@ -70,7 +70,8 @@ ul {
 .list-contacts .item + .item {
   margin-left: 50px;
 }
-.main-nav, .container-contacts {
+.main-nav,
+.container-contacts {
   display: flex;
   align-items: center;
 }
@@ -105,7 +106,7 @@ ul {
   border-bottom: var(--header-bottom-border) 1px solid;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -157,8 +158,18 @@ img{
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
- .heading-our-features-hidden, .studio-cards{
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .btn-main-section {
   padding: 10px 32px;
@@ -211,7 +222,7 @@ img{
 .team {
   text-align: center;
 }
-.what-we-are-doing{
+.what-we-are-doing {
   padding-top: 0;
   padding-bottom: 94px;
 }
@@ -237,8 +248,11 @@ img{
 }
 .card-staffer {
   background-color: var(--main-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
-.data-staffer{
+.data-staffer {
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 32px;
@@ -280,11 +294,11 @@ img{
   text-decoration: none;
   font-style: normal;
 }
-.list-address{
+.address-footer {
   margin-top: 20px;
 }
 .footer-contact-item:not(:first-child) {
-margin-top: 9px;
+  margin-top: 9px;
 }
 .email-ref.footer,
 .tel-ref.footer {
@@ -365,13 +379,14 @@ margin-top: 9px;
 .fifth-btn:focus {
   background-color: var(--click-color);
   color: var(--main-bg-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
 }
 .portfolio-cards {
   width: calc((100% - 60px) / 3);
   margin-top: 30px;
   margin-right: 30px;
   background-color: var(--main-bg-color);
-  
 }
 .portfolio-cards:nth-child(3n) {
   margin-right: 0;
@@ -379,10 +394,10 @@ margin-top: 9px;
 .portfolio-cards:nth-child(-n + 3) {
   margin-top: 0;
 }
-.name-portfolio-cards{
+.name-portfolio-cards {
   height: 110px;
   padding: 20px 24px;
-  border-bottom  : var(--portfolio-cards-color) 1px solid;
+  border-bottom: var(--portfolio-cards-color) 1px solid;
   border-left: var(--portfolio-cards-color) 1px solid;
   border-right: var(--portfolio-cards-color) 1px solid;
 }
